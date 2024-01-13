@@ -31,9 +31,7 @@ public class Racer implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
-
     }
     private String getPlace(){
         int finished = track.getFinishedRacers();
@@ -52,7 +50,6 @@ public class Racer implements Runnable {
     public void run() {
         go();
     }
-
 }
 
 

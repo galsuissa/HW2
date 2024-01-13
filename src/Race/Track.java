@@ -14,6 +14,4 @@ public class Track {
     public synchronized void setFinishedRacers(){
         this.finishedRacers++;
     }
-
-
 }

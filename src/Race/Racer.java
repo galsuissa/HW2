@@ -27,7 +27,7 @@ public class Racer implements Runnable {
                 track.setFinishedRacers();
             }
             try {
-                Thread.sleep(speed * 10);
+                Thread.sleep((11-speed) * 10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

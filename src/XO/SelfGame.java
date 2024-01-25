@@ -13,13 +13,19 @@ class SelfGame extends Game {
 
     @Override
     public synchronized void playGame() {
+        //
         while (!gameWon && !isBoardFull()) {
             currentPlayer.makeMove();
             printBoard();
             if (victoryChecker()) {
                 announceWinner(currentPlayer.getPlayerType());
             } else {
-                currentPlayer = (currentPlayer == playerX) ? playerO : playerX;
+                if(currentPlayer == playerX){ //change the current player
+                    currentPlayer = playerO;
+                }
+                else {
+                    currentPlayer = playerX;
+                }
             }
         }
 

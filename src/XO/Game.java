@@ -50,7 +50,7 @@ abstract class Game {
         return freeCells;
     }
 
-    protected boolean isBoardFull() {
+    protected boolean isBoardFull() { //method check if the board is fully
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 if (gameBoard[i][j] == '-') {

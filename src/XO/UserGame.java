@@ -19,7 +19,12 @@ class UserGame extends Game {
             if (victoryChecker()) {
                 announceWinner(currentPlayer.getPlayerType());
             } else {
-                currentPlayer = (currentPlayer == selfPlayer) ? userPlayer : selfPlayer;
+                if(currentPlayer == selfPlayer){ //change the current player
+                    currentPlayer = userPlayer;
+                }
+                else {
+                    currentPlayer = selfPlayer;
+                }
             }
         }
 
